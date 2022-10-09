@@ -1,18 +1,24 @@
 class MyCalendar {
 public:
-    set<pair<int, int>> period;
+    map<int, int> M;
     
     MyCalendar() {
             
     }
     
     bool book(int start, int end) {
-            for (auto e: period) {
-                    if ((e.second <= start) || (e.first >= end)) {
-                            
-                    } else return false;
+            if (M.empty()) {
+                    M[start] = end;
+                    return true;
             }
-            period.emplace(start, end);
+            auto I = M.lower_bound(end);
+            if (I == M.begin()) {
+                    M[start] = end;
+                    return true;
+            }
+            --I;
+            if ((I->second) > start) return false;
+            M[start] = end;
             return true;
     }
 };
