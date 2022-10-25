@@ -13,7 +13,7 @@ class Solution{
 
     //Function to check if two arrays are equal or not.
 bool check(vector<long long> A, vector<long long> B, int N) {
-        map<int, int> M;
+        unordered_map<int, int> M;
         for (auto e: A) {
                 ++M[e];
         }
