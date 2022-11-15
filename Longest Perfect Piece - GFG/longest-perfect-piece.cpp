@@ -6,7 +6,7 @@ using namespace std;
 class Solution {
   public:
     int longestPerfectPiece(int arr[], int N) {
-         int i=0, j=0, ans=1;
+ int i=0, j=0, ans=1;
         map<int, int>mp;
         mp[arr[0]]++;
         while(j<N){
