@@ -7,7 +7,7 @@ class Solution {
   public:
     int noOfOpenDoors(long long N) {
         // code here
-        int x= sqrtl(N);
+                int x= sqrtl(N);
         return x;
     }
 };
