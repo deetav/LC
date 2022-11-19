@@ -83,7 +83,7 @@ class Solution{
     public:
     bool areAnagrams(Node *root1, Node *root2)
     {
-         list<Node*> dq1;
+     list<Node*> dq1;
         list<Node*> dq2;
         dq1.push_back(root1);
         dq2.push_back(root2);
@@ -121,9 +121,6 @@ class Solution{
         
         if(dq1.size()!=0 || dq2.size()!=0) return false;
         return true;
-        
-        
-    
     }
 };
 
