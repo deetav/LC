@@ -13,7 +13,8 @@ using namespace std;
 class Solution {
   public:
     long long lcmTriplets(long long N) {
-        if(N==1) return 1LL;
+        // code here
+         if(N==1) return 1LL;
         if(N==2) return 2LL;
         if(N==3) return 6LL;
         long long ans ;
